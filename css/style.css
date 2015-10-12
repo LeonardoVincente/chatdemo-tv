@@ -1,0 +1,151 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+.list-group-item{
+    background: #ECF5FF;
+}
+
+.label-default {
+    background: #fff;
+    color:#428bca;
+}
+
+
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{
+    color:#AEDBFF;
+}
+
+html, body{
+    width:1280px;
+    height:720px;
+    background: transparent;
+}
+
+body {
+
+}
+
+h3{
+    
+}
+
+.connect-status{
+    height: 21%;
+    margin-bottom: 0px;
+    position: absolute;
+    top : 0%;
+    left : 76%;
+    bottom : 23%;
+    right : 0;
+    overflow: hidden;
+}
+
+.connect-status h1{
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.connect-status h2{
+    font-size: 1.25em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.connect-status h3{
+    font-size:1em;
+    margin-top: 15px;
+}
+
+#elPIN{
+    font-size: 18px;
+    margin-left: 80px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.container.sc-wrapper{
+    padding:5px;
+    /*background:rgba(0,0,0,.5);*/
+    border-radius: 10px;
+    max-width: none;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align : stretch;
+    margin: 0;
+    width: 100% /* needed for Firefox */
+}
+
+.sc-content{
+    position: relative;
+    -webkit-box-flex: 1;
+}
+
+.sc-content .video{
+    position: absolute;
+    top : 0px;
+    left : 0;
+    bottom : 0px;
+    right : 25%;
+    overflow: hidden;
+    height: 66%;
+}
+
+.sc-content .pnlMessage{
+    position: absolute;
+    top : 67%;
+    left : 0;
+    bottom : 0px;
+    right : 25%;
+    overflow: hidden;
+}
+
+.sc-content .pnlClient{
+    position: absolute;
+    top : 26%;
+    left : 76%;
+    bottom : 0px;
+    right : 0;
+    overflow: hidden;
+}
+
+.video{
+    background: #000;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sc-dialog{
+    display:none; /*hide until shown*/
+    position:absolute;
+    top : 40%;
+    left: 25%;
+    right:25%;
+    background: rgba(0,0,0,.9);
+    border-radius:10px;
+    color:#fff;
+    text-align:center;
+    padding : 30px;
+    font-size: 36px;
+}
+
+#cntMessages.panel-body{
+    padding:5px 15px;
+}
+
+#listMessages li p{
+    margin-bottom:5px;
+}
+
+#listMessages li{
+    padding: 5px 15px;
+    margin-bottom:5px;
+}
+
+.message-time{
+    float:right;
+}

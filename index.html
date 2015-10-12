@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <title>Multi-Screen Chat</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="img/favicon.png">
+
+    <script type="text/javascript" src="js/underscore.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Samsung SmartTV Widget API-->
+     <script>
+        if( navigator.userAgent.search(/Maple/) > -1) {
+            document.write('<script src="$MANAGER_WIDGET/Common/API/Widget.js"><\/script>');
+            document.write('<script src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"><\/script>');
+            document.write('<script src="$MANAGER_WIDGET/Common/API/Plugin.js"><\/script>');
+        }
+    </script>
+
+
+    <!-- Samsung MutliScreen TV API
+    <script type="text/javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/multiscreenapi.js"></script>
+    -->
+
+    <script type="text/javascript" src="js/multiscreen-smarttv-1.1.11.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+
+
+<body>
+<div class="container sc-wrapper">
+
+	<div class="sc-content">
+
+        <div class="panel-primary panel video">
+            <video id="videoPlayer" width="830" height="470" controls loop>
+                <!--source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"-->
+                <source src="http://multiscreen.samsung.com/downloads/big_buck_bunny.mp4" type="video/mp4">
+                <source src="http://multiscreen.samsung.com/downloads/big_buck_bunny.ogg" type="video/ogg">
+            </video>
+        </div>
+        <div class="panel panel-primary connect-status">
+            <div class="panel-heading">
+                <h1>Status <span id="elStatus" class="label">Connecting</span></h1>    
+                <h2>To connect by PIN Code use  <span id="elPIN" class="label label-default"> loading ...</span></h2>
+                <h3>Press <span class="label label-danger">A</span> to broadcast to all clients</h3>
+                <!-- p>v 0.1</p -->
+            </div>
+        </div>
+        <div class="panel panel-primary pnlClient">
+            <div class="panel-heading">
+                <h3 class="panel-title">Clients</h3>
+            </div>
+            <div id="cntClients" class="panel-body">
+            </div>
+        </div>
+
+        <div class="panel panel-primary pnlMessage">
+            <div class="panel-heading">
+                <h3 class="panel-title">Messages</h3>
+            </div>
+            <div id="cntMessages" class="panel-body">
+                <ul id="listMessages" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+
+	</div>
+</div>
+
+
+<div id="scDialog" class="container sc-dialog">
+</div>
+
+
+
+<script type="text/template" id="tplMessage">
+    <li class="list-group-item">
+        <span class="glyphicon glyphicon-comment"></span>
+        <strong> <%= message.fromName %> : </strong> <span class="message"><%= message.text.replace(/ /g,'&nbsp;') %></span> <strong><span class="message-time"><%= message.dateTime.toLocaleTimeString() %></span></strong>
+    </li>
+</script>
+
+
+
+<script type="text/template" id="tplClients">
+    <ul id="listClients" class="list-group">
+        <%  clients.forEach(function(item){
+            if(!item.isHost){
+        %>
+                <li class="list-group-item"><span class="glyphicon glyphicon-user"></span> <%= item.attributes.name %></li>
+        <%
+            }
+        });
+        %>
+    </ul>
+</script>
+
+</body>
+</html>

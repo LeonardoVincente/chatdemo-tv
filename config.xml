@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+	<ThumbIcon>thumb.png</ThumbIcon>
+	<BigThumbIcon>thumb.png</BigThumbIcon>
+	<ListIcon>thumb.png</ListIcon>
+    <BigListIcon>thumbs.png</BigListIcon>
+	
+	<category>lifestyle</category>
+	<autoUpdate>y</autoUpdate>
+	<cpname>Samsung</cpname>
+	<cpauthjs></cpauthjs>
+	<login>n</login>
+	<mouse>y</mouse>
+
+	<multiapp>y</multiapp>
+	
+	<ver>1.003</ver>
+	<mgrver>2.000</mgrver>
+	<network>n</network>
+	<fullwidget>n</fullwidget>
+	<srcctl>n</srcctl>
+	<ticker>n</ticker>
+	<childlock>n</childlock>
+	<audiomute>n</audiomute>
+	<videomute>n</videomute>
+	<dcont>y</dcont>
+	<movie>y</movie>
+	<runTitle>ChatDemo</runTitle>
+	<widgetname>ChatDemo MultiScreen SDK</widgetname>
+	<description>ChatDemo MultiScreen SDK</description>
+
+    <width>1280</width>
+	<height>720</height>
+
+	<author>
+		<name>Samsung Electronics Co. Ltd.</name>
+		<email></email>
+		<link>http://www.sec.co.kr/</link>
+		<organization>Samsung Electronics Co. Ltd.</organization>
+	</author>
+</widget>
